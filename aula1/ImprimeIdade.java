@@ -22,7 +22,7 @@ public class ImprimeIdade {
                         + " Atenção! Você está fora do peso ideal!");
             } else {
                 System.out.println("Você tem " + idade + " anos e seu imc é de " + imc
-                        + " Cuidado! Você corre risco de obesidade");
+                        + " Cuidado! Você corre risco de obesidade.");
             }
         } else {
         }

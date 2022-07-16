@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class RepetidorEnquanto {
     public static void main(String[] args) {
-        
+
         Random randomico = new Random();
 
         int c = 0;
@@ -12,17 +12,17 @@ public class RepetidorEnquanto {
         double t = 0;
         double p = 0;
 
-        while(c < 15){
+        while (c < 15) {
             t++;
             i = randomico.nextInt(120);
 
-            if(i % 7 == 0 || i % 12 == 0 && i!=0){
+            if (i % 7 == 0 || i % 12 == 0 && i != 0) {
                 c++;
-                p= (c/t) * 100;
-                System.out.println("Sorteio: " +i+ ", múltiplos de 7 ou 12, percentual de sorteio: " +p+ ".");
+                p = (c / t) * 100;
+                System.out.println("Sorteio: " + i + ", múltiplos de 7 ou 12, percentual de sorteio: " + p + ".");
             }
         }
         System.out.println("-------------------------------------");
-        System.out.println("Ao sortear: " +t+ ", foram encontrados: " +c+ ". Percentual final: "+p);
+        System.out.println("Ao sortear: " + t + ", foram encontrados: " + c + ". Percentual final: " + p);
     }
 }

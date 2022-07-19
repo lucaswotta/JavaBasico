@@ -10,6 +10,7 @@ public class Carro {
     int numPassageiro;
     double capCombustivel;
     double consCombustivel;
+    String tipoCombustivel;
     // #endregion
 
     // #region Regras de Negócios da Classe (Métodos)
@@ -17,8 +18,19 @@ public class Carro {
         return Math.round((this.capCombustivel * this.consCombustivel));
     }
 
+    public double avaliaTipoCombustivel(String combustivel) {
+        if (combustivel == "diesel") {
+            return 1.6;
+        } else if (combustivel == "etanol") {
+            return 0.7;
+        } else {
+            return 1;
+        }
+    }
+
     public double verificarEcoDesempenho() {
-        double eco = this.calculaAutonomia() / this.numPassageiro;
+        double eco = (this.calculaAutonomia() / this.numPassageiro) 
+        * this.avaliaTipoCombustivel(this.tipoCombustivel);
         return Math.round(eco);
     }
 
